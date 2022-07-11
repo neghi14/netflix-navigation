@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.nav.active {
+    transform: translateX(0);
+}
+
+.nav {
+    position: fixed;
+    height: 100vh;
+}
+
+.navBlack {
+    width: 100%;
+    background-color: black;
+    transform: translateX(-100%);
+    transition: transform .5s ease-in .3s;
+}
+
+.navBlack.active {
+    transition: transform .5s ease-in;
+}
+.navRed.active {
+    transition: transform .5s ease-in 0.2s;
+}
+.navWhite.active {
+    transition: transform .5s ease-in 0.3s;
+}
+
+.navRed {
+    width: 95%;
+    background-color: red;
+    transform: translateX(-100%);
+    transition: transform .5s ease-in .2s;
+}
+
+.navWhite {
+    width: 90%;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform .5s ease-in;
+}
+
+.ico {
+    width: 42px;
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    background-image: url(/img/bars.svg);
+    transition: transform .3s ease-in;
+
+}
+.anim{
+    transform: rotateY(180deg);
+}
+.ico.anim{
+    transition: transform .3s ease-in;
+}
+.ico-active{
+    background-image: url(/img/rectangle-xmark.svg); 
+    transform: rotateX(180deg);
+    transition: transform .3s ease-in;
+}
+
+.navLinks {
+    list-style: none;
+    margin: 0;
+    padding: 200px 20px;
+}
+
+.navLinks a {
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+}
